@@ -1,0 +1,37 @@
+const mongoose = require('mongoose')
+
+const dealSchema = new mongoose.Schema({
+    id: Number,
+    title: String,
+    honorific: String,
+    name: String,
+    second_name: String,
+    last_name: String,
+    company_title: String,
+    company_id: String,
+    contact_id: Number,
+    is_return_customer: String,
+    birthdate: String,
+    source_id: String,
+    source_description: String,
+    status_id: String,
+    status_description: String,
+    post: String,
+    comments: String,
+    currency_id: String,
+    opportunity: String,
+    is_manual_opportunity: String,
+    has_phone: String,
+    has_email: String,
+    has_imol: String,
+    assigned_by_id: Number,
+    created_by_id: Number,
+    modify_by_id: Number,
+    date_create: Date,
+    date_modify: Date,
+    date_closed: Date,
+    status_semantic_id: String,
+    opened: String,
+})
+
+module.exports = mongoose.model('deals', dealSchema)

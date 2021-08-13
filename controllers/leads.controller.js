@@ -63,7 +63,6 @@ module.exports.getLeads = async (req, res) => {
                 else{
                     res.json({status:'err', msg:'can not get data'})
                 }
-                // res.json({leads:response.data.result.result})
             })
     }
     catch (e) {

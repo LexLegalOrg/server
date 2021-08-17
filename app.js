@@ -33,6 +33,18 @@ app.use('/api/deals', dealsRoutes)
 const leadsRoutes = require('./routes/leads.routes')
 app.use('/api/leads', leadsRoutes)
 
+// AUTH ROUTES
+const authRoutes = require('./routes/auth.routes')
+app.use('/api/auth', authRoutes)
+
+// Bonus ROUTES
+const bonusesRoutes = require('./routes/bonuses.routes')
+app.use('/api/bonus', bonusesRoutes)
+
+// PLANNING ROUTES
+const planningRoutes = require('./routes/planning.routes')
+app.use('/api/plan', planningRoutes)
+
 
 
 module.exports = app

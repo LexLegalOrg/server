@@ -64,6 +64,20 @@ module.exports.getUsers = async(req,res)=>{
     }
 }
 
+module.exports.getUserById = async(req,res)=>{
+    try{
+        let user = await User.findOne({
+            bitrix_id: req.params.bitrix_id
+        })
+
+        res.json(user)
+    }
+
+    catch(e){
+        errorUtil(res,e)
+    }
+}
+
 module.exports.getOnlyActiveUsers = async(req,res)=>{
     try{
         let filter = {"account.active":true}

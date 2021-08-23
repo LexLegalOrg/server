@@ -34,6 +34,9 @@ module.exports.split_arrays = (items) => {
         items.leads_seven.forEach(i=>{
             leads.push(i)
         })
+        items.leads_eight.forEach(i=>{
+            leads.push(i)
+        })
 
         return 
     }
@@ -45,7 +48,7 @@ module.exports.split_arrays = (items) => {
 
 module.exports.getLeads = async (req, res) => {
     try {
-        let q_params = "?halt=0&cmd[leads]=crm.lead.list&cmd[leads_two]=crm.lead.list?start=50&cmd[leads_third]=crm.lead.list?start=100&cmd[leads_fourth]=crm.lead.list?start=150&cmd[leads_five]=crm.lead.list?start=200&cmd[leads_six]=crm.lead.list?start=250&cmd[leads_seven]=crm.lead.list?start=300"
+        let q_params = "?halt=0&cmd[leads]=crm.lead.list&cmd[leads_two]=crm.lead.list?start=50&cmd[leads_third]=crm.lead.list?start=100&cmd[leads_fourth]=crm.lead.list?start=150&cmd[leads_five]=crm.lead.list?start=200&cmd[leads_six]=crm.lead.list?start=250&cmd[leads_seven]=crm.lead.list?start=300&cmd[leads_eight]=crm.lead.list?start=350"
         let options = {
             url: base_url.url + methods.batch + q_params,
             method: 'get'
